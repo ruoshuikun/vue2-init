@@ -31,7 +31,7 @@ module.exports = {
   },
   // 部署生产环境和开发环境下的URL。
   // 默认情况下，Vue CLI 会假设你的应用是被部署在一个域名的根路径上
-  // publicPath: NODE_ENV === 'production' ? '/labeling-system/' : './',
+  // publicPath: NODE_ENV === 'production' ? '/vue2-init/' : './',
   publicPath: './',
   // 在npm run build 或 yarn build 时 ，生成文件的目录名称（要和baseUrl的生产环境路径一致）（默认dist）
   outputDir: name,

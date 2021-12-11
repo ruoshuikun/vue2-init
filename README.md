@@ -1,24 +1,65 @@
-# dnaxcat
+# vue2-init
 
-## Project setup
+## vue2初始化
+
+- Layout 布局
+
+  - Header 头部
+  - Footer 尾部
+
+- 异常页面
+
+  - 404
+
+- 样式
+
+  - Scss variables
+
+  - [normalize.css](https://github.com/necolas/normalize.css)
+
+- .prettierrc.js 格式化
+
+- vue.config.js
+
+  - alias 添加路径别名
+
+    ```javascript
+    chainWebpack: (config) => {
+      config.resolve.alias
+        .set('@', resolve('./src'))
+        .set('comps', resolve('./src/components'))
+        .set('img', resolve('./src/assets/img'))
+        .set('assets', resolve('./src/assets'))
+        .set('apis', resolve('./src/apis'))
+        .set('utils', resolve('./src/utils'))
+        .set('views', resolve('./src/views'))
+    }
+    ```
+
+  - css.loaderOptions 设置
+
+    ```javascript
+    css: {
+      loaderOptions: {
+      	sass: {
+      		prependData: `@import "./src/assets/styles/_variables.scss";`
+      	}
+      }
+    }
+    ```
+
+
+## 安装依赖
 ```
-yarn install
+pnpm install
 ```
 
-### Compiles and hot-reloads for development
+### 编译和热重载以进行开发
 ```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
+pnpm run serve
 ```
 
-### Lints and fixes files
+### 编译和最小化以用于生产
 ```
-yarn lint
+pnpm run build
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
